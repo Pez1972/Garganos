@@ -4,3 +4,4 @@ public enum EstadoProfesor {
     ACTIVO,
     INCATIVO
 }
+
