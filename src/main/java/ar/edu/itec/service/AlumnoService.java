@@ -1,9 +1,9 @@
 package ar.edu.itec.service;
 
 import ar.edu.itec.model.Alumno;
-
 import java.util.ArrayList;
 import java.util.List;
+import ar.edu.itec.model.EstadoAlumno;
 
 public class AlumnoService {
 
@@ -27,5 +27,11 @@ public class AlumnoService {
             }
         }
         return null;
+    }
+    public void darDeBaja(String dni) {
+        Alumno alumno = buscarPorDni(dni);
+        if (alumno != null) {
+            alumno.setEstado(EstadoAlumno.INACTIVO);
+        }
     }
 }

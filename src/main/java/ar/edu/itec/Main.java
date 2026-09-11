@@ -22,8 +22,8 @@ public class Main {
         System.out.println(encontrado.getNombre());
 
         //System.out.println(alumno1.getNombre());
-        System.out.println(alumno1.getEstado());
-        alumno1.setEstado(EstadoAlumno.INACTIVO);
+        //System.out.println(alumno1.getEstado());
+        servicio.darDeBaja("44265396");
         System.out.println(alumno1.getEstado());
     }
 }
