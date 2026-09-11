@@ -1,14 +1,18 @@
 package ar.edu.itec;
 
+import java.util.ArrayList;
+
 public class Materia {
     private String nombre;
-    private int año;
+    private int ano;
     private String cuatrimestre;
+    private ArrayList<Materia> correlativas;
 
-    public Materia(String nombre, int año, String cuatrimestre) {
+    public Materia(String nombre, int ano, String cuatrimestre) {
         this.nombre = nombre;
-        this.año = año;
+        this.ano = ano;
         this.cuatrimestre = cuatrimestre;
+        this.correlativas = new ArrayList<>();
     }
 
     public String getNombre() {
@@ -19,12 +23,12 @@ public class Materia {
         this.nombre = nombre;
     }
 
-    public int getAño() {
-        return año;
+    public int getAno() {
+        return ano;
     }
 
-    public void setAño(int año) {
-        this.año = año;
+    public void setAno(int ano) {
+        this.ano = ano;
     }
 
     public String getCuatrimestre() {
@@ -33,5 +37,13 @@ public class Materia {
 
     public void setCuatrimestre(String cuatrimestre) {
         this.cuatrimestre = cuatrimestre;
+    }
+
+    public ArrayList<Materia> getCorrelativas() {
+        return correlativas;
+    }
+
+    public void setCorrelativas(ArrayList<Materia> correlativas) {
+        this.correlativas = correlativas;
     }
 }

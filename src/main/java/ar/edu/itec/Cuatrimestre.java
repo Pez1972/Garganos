@@ -3,24 +3,24 @@ package ar.edu.itec;
 import java.time.LocalDate;
 
 public class Cuatrimestre {
-    private int año;
+    private int ano;
     private int numero;
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
 
-    public Cuatrimestre(int año, int numero, LocalDate fechaInicio, LocalDate fechaFin) {
-        this.año = año;
+    public Cuatrimestre(int ano, int numero, LocalDate fechaInicio, LocalDate fechaFin) {
+        this.ano = ano;
         this.numero = numero;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
     }
 
-    public int getAño() {
-        return año;
+    public int getAno() {
+        return ano;
     }
 
-    public void setAño(int año) {
-        this.año = año;
+    public void setAno(int ano) {
+        this.ano = ano;
     }
 
     public int getNumero() {
