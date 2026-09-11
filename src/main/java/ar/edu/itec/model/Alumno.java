@@ -1,4 +1,4 @@
-package ar.edu.itec;
+package ar.edu.itec.model;
 
 public class Alumno {
     private String nombre;
