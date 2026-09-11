@@ -52,4 +52,29 @@ public class AlumnoService {
             alumno.setEstado(EstadoAlumno.INACTIVO);
         }
     }
+    public void modificarAlumno(String dni, String nombre, String apellido, String mail, String telefono) {
+        Alumno alumno = buscarPorDni(dni);
+        if (alumno == null) {
+            throw new IllegalArgumentException("El alumno no existe");
+        }
+        if (nombre == null || nombre.isBlank()) {
+            throw new IllegalArgumentException("El nombre es obligatorio");
+        }
+        if (apellido == null || apellido.isBlank()) {
+            throw new IllegalArgumentException("El apellido es obligatorio");
+        }
+        if (mail == null || mail.isBlank()
+                || !mail.contains("@")) {
+            throw new IllegalArgumentException("El email no es válido");
+        }
+        if (telefono == null || telefono.isBlank()
+                || !telefono.matches("[0-9]{8,15}")) {
+            throw new IllegalArgumentException("El formato del teléfono no es correcto");
+        }
+        alumno.setNombre(nombre);
+        alumno.setApellido(apellido);
+        alumno.setMail(mail);
+        alumno.setTelefono(telefono);
+
+    }
 }
